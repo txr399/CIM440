@@ -8,7 +8,16 @@ var sunY = 0;
 var snowX = [];
 var snowY = [];
 
-snowAmount = 100;
+var snowAmount = 100;
+
+var leafX = [];
+var leafY = [];
+var leafAmount = 100;
+var leafImage;
+
+function preload(){
+  leafImage = loadImage("https://openclipart.org/image/300px/svg_to_png/257622/1470680735.png");
+}
 
 function setup() {
   // put setup code here
@@ -52,9 +61,16 @@ function draw() {
   }else if(seasonType == "winter"){
     console.log("winter");
 
-    for(varX = 0; x<snowAmount; x++){
+    for(var x = 0; x<snowAmount; x++){
       snowY[x]++; // snowY[i] = snowY[i] +1;
+      snowY[x] = snowY[x] + 5;
       ellipse(snowX[x], snowY[x],10,10);
+      // checks for snow hitting bottom of canvas
+      if(snowY[x] > height){
+        //snowY[x] = 0;
+        snowY[x] = random(0,-500);
+        snowX[x] = random(0, width);
+      }
     }
 
 
