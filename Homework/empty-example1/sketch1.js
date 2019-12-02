@@ -1,7 +1,7 @@
-let golf;
-function preload(){
-  golf = loadImage('images/golf.jpg');
+function setup() {
+  createCanvas(600,600);
 }
-function setup(){
-  createCanvas(500,500);
+
+function draw() {
+  background(0);
 }

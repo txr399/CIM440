@@ -2,21 +2,24 @@ var pictureSelect;
 var pictureType = "";
 
 var picY = 0;
-picX = 0;
+var picX = 0;
 
 hitX1 = 300;
-hitY1 = 100;
+hitY1 = 200;
 
 hitX2 = 500;
-hitY2 = 200;
+hitY2 = 400;
 
-hitX3 = 150;
-hitY3 = 150;
+hitX3 = 300;
+hitY3 = 400;
 
-hitX4 = 200;
+hitX4 = 500;
 hitY4 = 200;
 
 var threshold = 50;
+
+var hitzoneDistance = 0;
+var backgroundChange = "red";
 
 function preload(){
   gameImage = loadImage("https://cdn.shopify.com/s/files/1/1723/9103/products/Screen_Shot_2017-08-05_at_3.53.44_PM_20865813-4392-48f5-8cdd-6dfa78272792_1024x1024.png?v=1501966522"); //load image link
